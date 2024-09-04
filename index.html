@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="css/main.css" />
+        <title>Mine Sweeper</title>
+    </head>
+
+    <body onload="onInit()">
+        <h1>Mine Sweeper</h1>
+
+        <table>
+            <tbody class="board"></tbody>
+        </table>
+        <div class="difficulty-btns">
+            <button onclick="changeBoard(4 , 2)">Beginner</button>
+            <button onclick="changeBoard(9 , 10)">Intermediate</button>
+            <button onclick="changeBoard(12 , 40 )">Expert</button>
+        </div>
+
+        <footer>
+            <h3>© Amit Baruch</h3>
+        </footer>
+
+        <script src="js/util.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>

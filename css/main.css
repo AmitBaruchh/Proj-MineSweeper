@@ -1,0 +1,41 @@
+body {
+    text-align: center;
+}
+
+table {
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin: auto;
+}
+
+.board td {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    transition: 0.5s;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.mine-hit {
+    background-color: red;
+}
+
+.revealed {
+    background-color: #e0e0e0;
+}
+
+.difficulty-btns {
+    margin-top: 10px;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: lightgray;
+    border-top: 2px solid black;
+    margin-top: 10 px;
+    padding: 10px;
+}
