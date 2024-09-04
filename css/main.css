@@ -1,5 +1,8 @@
 body {
     text-align: center;
+    margin: 0;
+    padding: 0;
+    cursor: default;
 }
 
 table {
@@ -17,12 +20,16 @@ table {
     cursor: pointer;
 }
 
-.mine-hit {
+.board td.mine-hit {
     background-color: red;
+    transition: 0.5s;
+    cursor: not-allowed;
 }
 
-.revealed {
-    background-color: #e0e0e0;
+.board td.revealed {
+    background-color: #dbdada;
+    transition: 0.5s;
+    cursor: not-allowed;
 }
 
 .difficulty-btns {
@@ -31,11 +38,20 @@ table {
 
 footer {
     position: fixed;
-    left: 0;
+    position: sticky;
     bottom: 0;
     width: 100%;
     background-color: lightgray;
     border-top: 2px solid black;
-    margin-top: 10 px;
+    margin-top: 10px;
     padding: 10px;
+}
+
+.reset-btn,
+.hint {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 20px;
+    margin-bottom: 10px;
 }
