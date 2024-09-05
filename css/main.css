@@ -4,8 +4,16 @@ body {
     padding: 0;
     cursor: default;
     font-family: 'Trebuchet MS', Helvetica, sans-serif;
-    background-color: #ede7f6;
+    background: linear-gradient(to top, #ede7f6, #bbdefb);
     color: #333333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.reset-btn-container {
+    margin: auto;
+    max-width: 30%;
 }
 
 table {
@@ -23,7 +31,7 @@ table {
     transition: 0.5s;
     border: 1px solid #9575cd;
     background-color: #e3f2fd;
-    color: #7e57c2;
+    color: #5e35b1;
     cursor: pointer;
 }
 
@@ -52,18 +60,19 @@ table {
 
 .difficulty-btns button {
     margin-top: 10px;
-    background-color: #ce93d8;
-    border: 2px solid #ba68c8;
-    color: white;
-    padding: 10px 20px;
     border-radius: 8px;
+    border: none;
+    transition: background-color 0.3s;
+    background-color: #bbdefb;
+    color: #333333;
+    padding: 10px 20px;
     cursor: pointer;
+    margin: 5px 10px;
     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .difficulty-btns button:hover {
-    background-color: #e1bee7;
-    transform: translateY(-3px);
+    background-color: #90caf9;
 }
 
 footer {
@@ -86,8 +95,29 @@ footer {
     cursor: pointer;
     font-size: 20px;
     margin-bottom: 10px;
+    border-radius: 8px;
+    border: none;
+    margin: 5px 10px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.reset-btn:hover,
+.hint:hover {
+    background-color: #b39ddb;
 }
 
 .highlighted-hint {
     background-color: #ffccbc;
+}
+
+.highscore-table {
+    margin: 20px auto;
+    width: 80%;
+    border: 1px solid #fafafa;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
 }

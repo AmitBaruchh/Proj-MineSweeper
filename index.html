@@ -17,8 +17,11 @@
             <button class="hint" onclick="onHintClicked(this)"></button></span>
         </h3>
         
-        <h3>Number Of Flags Left: <span class="flags"></span></h3>
-        <button class="reset-btn" onClick="onInit()">😁</button>
+        <h3>Number Of Flags Left🚩: <span class="flags"></span></h3>
+        <span class="timer">00.000</span>
+        <div class = "reset-btn-container">
+            <button class="reset-btn" onClick="onInit()">😁</button>
+        </div>
 
         <table>
             <tbody class="board"></tbody>
@@ -29,11 +32,32 @@
             <button onclick="changeBoard(12 , 40 )">Expert</button>
         </div>
 
+<table class="highscore-table">
+        <tr>
+            <th>Level</th>
+            <td>Beginner</td>
+            <td>Intermediate</td>
+            <td>Expert</td>
+        </tr>
+
+    <tbody>
+        <tr>
+            <th>High Score</th>
+            <td id="Beginner"></td>
+            <td id="Intermediate"></td>
+            <td id="Expert"></td>
+        </tr>
+      
+    </tbody>
+</table>
+
+
         <footer>
-            <h3>© Amit Baruch</h3>
+            <h5>© Amit Baruch</h5>
         </footer>
 
         <script src="js/util.js"></script>
+        <script src="js/board.js"></script>
         <script src="js/main.js"></script>
     </body>
 </html>
