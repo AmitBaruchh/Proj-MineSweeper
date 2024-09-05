@@ -3,12 +3,17 @@ body {
     margin: 0;
     padding: 0;
     cursor: default;
+    font-family: 'Trebuchet MS', Helvetica, sans-serif;
+    background-color: #ede7f6;
+    color: #333333;
 }
 
 table {
-    border: 1px solid black;
+    border: 1px solid #b39ddb;
+    background: linear-gradient(to right, #e1bee7, #bbdefb);
     border-collapse: collapse;
     margin: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .board td {
@@ -16,18 +21,27 @@ table {
     height: 30px;
     text-align: center;
     transition: 0.5s;
-    border: 1px solid black;
+    border: 1px solid #9575cd;
+    background-color: #e3f2fd;
+    color: #7e57c2;
     cursor: pointer;
 }
 
+.board td:hover {
+    background-color: #d1c4e9;
+    transform: scale(1.05);
+}
+
 .board td.mine-hit {
-    background-color: red;
+    background-color: #ff8a80;
+    color: #ffffff;
     transition: 0.5s;
     cursor: not-allowed;
 }
 
 .board td.revealed {
-    background-color: #dbdada;
+    background-color: #c5cae9;
+    color: #333333;
     transition: 0.5s;
     cursor: not-allowed;
 }
@@ -36,22 +50,44 @@ table {
     margin-top: 10px;
 }
 
+.difficulty-btns button {
+    margin-top: 10px;
+    background-color: #ce93d8;
+    border: 2px solid #ba68c8;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.difficulty-btns button:hover {
+    background-color: #e1bee7;
+    transform: translateY(-3px);
+}
+
 footer {
     position: fixed;
     position: sticky;
     bottom: 0;
     width: 100%;
-    background-color: lightgray;
-    border-top: 2px solid black;
-    margin-top: 10px;
-    padding: 10px;
+    background-color: #b3e5fc;
+    border-top: 2px solid #333333;
+    padding: 5px;
+    margin-top: 20px;
+    color: #333333;
 }
 
 .reset-btn,
 .hint {
     border: none;
-    background-color: transparent;
+    background-color: #ce93d8;
+    color: #333333;
     cursor: pointer;
     font-size: 20px;
     margin-bottom: 10px;
+}
+
+.highlighted-hint {
+    background-color: #ffccbc;
 }
