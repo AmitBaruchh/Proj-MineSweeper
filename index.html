@@ -9,48 +9,67 @@
     </head>
 
     <body onload="onInit()">
-        <h1>Mine Sweeper</h1>
-        <h3>Lives: <span class="live"></span></h3>
-        <h3>
-            Hints:<span><button class="hint" onclick="onHintClicked(this)"></button></span>
-            <button class="hint" onclick="onHintClicked(this)"></button>
-            <button class="hint" onclick="onHintClicked(this)"></button></span>
-        </h3>
-        
-        <h3>Number Of Flags Left🚩: <span class="flags"></span></h3>
-        <span class="timer">00.000</span>
-        <div class = "reset-btn-container">
+        <div class="game-container">
+            <h1>Mine Sweeper</h1>
+
+            <div class="game-info">
+                <div class="flags-timer">
+                    <h3>🚩: <span class="flags"></span></h3>
+                    <span class="timer">00.000</span>
+                </div>
+                <h3><span class="live"></span></h3>
+                <h3>
+                    <span><button class="hint" onclick="onHintClicked(this)"></button></span>
+                    <button class="hint" onclick="onHintClicked(this)"></button>
+                    <button class="hint" onclick="onHintClicked(this)"></button>
+                </h3>
+            </div>
+
+            <div class="navigation-buttons">
+                <button onclick="onBack()">🔙</button>
+                <button onclick="onDarkMode(this)">🌚</button>
+            </div>
+
+            <div class="action-buttons">
+                <div>
+                    <button onclick="onSafeClick()">🛡️</button>
+                    <p><span></span> clicks available</p>
+                </div>
+                <div>
+                    <button onclick="onManualMineClick()">💣</button>
+                    <p>Remaining mines: <span class="remaining-mines"></span></p>
+                </div>
+            </div>
+
             <button class="reset-btn" onClick="onInit()">😁</button>
+
+            <table>
+                <tbody class="board"></tbody>
+            </table>
+
+            <div class="difficulty-btns">
+                <button onclick="changeBoard(4 , 2)">Beginner</button>
+                <button onclick="changeBoard(9 , 10)">Intermediate</button>
+                <button onclick="changeBoard(12 , 40)">Expert</button>
+            </div>
+
+            <table class="highscore-table">
+                <tr>
+                    <th>Level</th>
+                    <td>Beginner</td>
+                    <td>Intermediate</td>
+                    <td>Expert</td>
+                </tr>
+                <tbody>
+                    <tr>
+                        <th>High Score</th>
+                        <td id="Beginner"></td>
+                        <td id="Intermediate"></td>
+                        <td id="Expert"></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-
-        <table>
-            <tbody class="board"></tbody>
-        </table>
-        <div class="difficulty-btns">
-            <button onclick="changeBoard(4 , 2)">Beginner</button>
-            <button onclick="changeBoard(9 , 10)">Intermediate</button>
-            <button onclick="changeBoard(12 , 40 )">Expert</button>
-        </div>
-
-<table class="highscore-table">
-        <tr>
-            <th>Level</th>
-            <td>Beginner</td>
-            <td>Intermediate</td>
-            <td>Expert</td>
-        </tr>
-
-    <tbody>
-        <tr>
-            <th>High Score</th>
-            <td id="Beginner"></td>
-            <td id="Intermediate"></td>
-            <td id="Expert"></td>
-        </tr>
-      
-    </tbody>
-</table>
-
 
         <footer>
             <h5>© Amit Baruch</h5>
